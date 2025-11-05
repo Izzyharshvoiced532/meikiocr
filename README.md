@@ -91,10 +91,17 @@ print('\n'.join([line['text'] for line in results if line['text']]))
 
 you can adjust the confidence thresholds for both the text line detection and the character recognition models. lowering the thresholds results in more detected text lines and characters, while higher values prevent false positives.
 
-```bash
-# example with lower thresholds
-python meiki_ocr.py examples/input.jpg --det_threshold 0.3 --rec_threshold 0.05
+```python
+MeikiOCR().run_ocr(self, image, det_threshold=0.8, rec_threshold=0.2) # less, but more confident text boxes and characters returned
 ```
+
+### running dedicated detection
+
+if you only care about the position of the text and not the content you can run the detection by itself, which is faster than running the whole ocr pipeline:
+```python
+MeikiOCR().run_detection(self, image, det_threshold=0.8, rec_threshold=0.2) # only returns text line coordinates (for horizontal and vertical text lines)
+```
+in the same way you can also run_recognition by itself on images of precropped (horizontal) text lines.
 
 ## how it works
 
