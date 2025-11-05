@@ -52,38 +52,40 @@ the easiest way to see `meikiocr` in action is to try the live demo hosted on hu
 
 ## installation
 
-the script is designed to be easy to run. first, clone the repository and install the required packages.
-
 ```bash
-git clone https://github.com/your-github-username/meikiocr.git
-cd meikiocr
-pip install -r requirements.txt
+pip install meikiocr
 ```
 
 ### for nvidia gpu users (recommended)
 
-for a massive performance boost, you can install the gpu-enabled version of onnx runtime. this will be detected automatically by the script.
+for a massive performance boost, you can install the gpu-enabled version of the onnx runtime. this will be detected automatically by the script.
 
 ```bash
-# first, uninstall the cpu version if it's already installed
+pip install meikiocr
 pip uninstall onnxruntime
-
-# then, install the gpu version
 pip install onnxruntime-gpu
 ```
 
 ## usage
 
-run the pipeline by providing the path to an image.
+this is how meikiocr can be called. you can also run [demo.py](https://github.com/rtr46/meikiocr/blob/main/demo.py) for additional visual output.
 
-```bash
-python meiki_ocr.py examples/input.jpg
+```python
+import cv2
+import numpy as np
+from urllib.request import urlopen
+from meikiocr import MeikiOCR
+
+IMAGE_URL = "https://huggingface.co/spaces/rtr46/meikiocr/resolve/main/example.jpg"
+
+with urlopen(IMAGE_URL) as resp:
+    image = cv2.imdecode(np.asarray(bytearray(resp.read()), dtype="uint8"), cv2.IMREAD_COLOR)
+
+ocr = MeikiOCR() # Initialize the OCR pipeline
+results = ocr.run_ocr(image) # Run the full OCR pipeline
+print('\n'.join([line['text'] for line in results if line['text']]))
+
 ```
-
-this will generate three output files in the same directory:
-*   `input_ocrresult.jpg`: a copy of the input image with character bounding boxes drawn on it.
-*   `input_ocrresult.json`: a structured file containing the recognized text and detailed information for each character, including its bounding box and confidence score.
-*   `input_ocrresult.txt`: a plain text file with just the recognized lines.
 
 ### adjusting thresholds
 
